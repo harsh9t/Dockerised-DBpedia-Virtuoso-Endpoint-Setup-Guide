@@ -5,7 +5,8 @@
 - Download your favorite version of DBpedia dataset (either manually or using the next steps)
 - Script-downloading
 - $git clone https://github.com/AKSW/DBpedia-docker
-- Edit the Makefile, specifying the urls or the dataset version you wish to download
+
+Edit the Makefile, specifying the urls or the dataset version you wish to download
 - $make download
 - $make unpack
 
@@ -36,7 +37,7 @@ You will now be inside the docker virtuoso, then run
 
 
 You will now be inside the ISQL terminal of the virtuoso docker. Then, run
-- $ld_dir(‘dumps/’,’*.*’,’http://dbpedia.org/’);
+- $ld_dir(‘dumps/’, ’*.*’, ’http://dbpedia.org/’);
 
 In the above command, the first argument is the path of the dumps/ repository, second specifies the files to be loaded (*.* - everything in dumps, *.ttl - for only ttl files in dumps, etc); and last argument is the named graph where you want all your data to be loaded.
 
