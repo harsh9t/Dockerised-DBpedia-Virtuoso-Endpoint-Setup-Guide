@@ -3,7 +3,10 @@
 ## Downloading DBpedia
 
 - Download your favorite version of DBpedia dataset (either manually or using the next steps)
-- Script-downloading
+
+### Script-downloading
+
+Get the download commands from the following repository:
 - $git clone https://github.com/AKSW/DBpedia-docker
 
 Edit the Makefile, specifying the urls or the dataset version you wish to download
