@@ -17,12 +17,16 @@ Get the download commands from the following repository:
 git clone https://github.com/AKSW/DBpedia-docker
 ```
 
-Edit the Makefile, specifying the urls or the dataset version you wish to download
+Edit the Makefile, specifying the urls or the dataset version you wish to download.
+Now to download the files and ontology, run
 ```sh 
-make download (to download the files and ontology)
+make download
+```
 
-make unpack (to unzip the downloaded files) ```
-
+Then to unzip the downloaded files, run:
+```sh
+make unpack
+```
 
 _You can also write your custom scripts. Also note the above script has issues downloading the files from [https://downloads.dbpedia.org/{release-year}//core/] so you might want to look into this._
 
@@ -86,7 +90,8 @@ In the above command, the first argument is the path of the `dumps/` repository,
 
 
 Then run the rdf loader to start loading the triples in to the database, run:
-```sh rdf_loader_run();
+```sh 
+rdf_loader_run();
 ```
 
 
@@ -95,11 +100,9 @@ Then run the rdf loader to start loading the triples in to the database, run:
 The SPARQL endpoint will be exposed at the ports declared during the docker run command. If you forgot to declare them back then, you are screwed. There is no way to do so now. Start over. Game over!
 
 
-If you did declare them (as in our case, cf. docker run command), goto:
+If you did declare them (as in our case, cf. docker run command), goto: http://localhost:8890/sparql
 
-http://localhost:8890/sparql
-
-And you should be able to see the interface.
+And you should be able to see the SPARQL interface.
 
 
 Enjoy!
